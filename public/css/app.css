@@ -1,0 +1,201 @@
+@font-face {
+    font-family: montserrat_regular;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: montserrat_medium;
+    src: url(../fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: montserrat_semibold;
+    src: url(../fonts/Montserrat-SemiBold.ttf);
+}
+@font-face {
+    font-family: montserrat_bold;
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+:root {
+    --primary: #E0BE5F;
+    --secondary: #000;
+    --third: #1B1B1B;
+}
+
+body {
+    font-family: montserrat_regular, Verdana, Geneva, Tahoma, sans-serif;
+    background: #f8f8f8;
+}
+
+.bg__primary {background-color: var(--primary);}
+.bg__secondary {background-color: var(--secondary);}
+.bg__third {background-color: var(--third);}
+
+.text__primary {color: var(--primary);}
+.text__secondary {color: var(--secondary);}
+.text__third {color: var(--third);}
+
+.text__medium {font-family: montserrat_medium, Verdana, Geneva, Tahoma, sans-serif;}
+.text__semibold {font-family: montserrat_semibold, Verdana, Geneva, Tahoma, sans-serif;}
+.text__bold {font-family: montserrat_bold, Verdana, Geneva, Tahoma, sans-serif;}
+.link__unstyle {
+    text-decoration: none;
+    color: inherit;
+}
+
+.mobile_menu_close_btn {
+    outline: none;
+    background: transparent;
+    color: #f8f8f8 !important;
+}
+
+.article_card_link:hover {color: var(--third) !important;}
+
+.btn {border-radius: 5px !important;}
+
+.btn:focus {box-shadow: 0 0 2px 3px #e0be5f80;}
+
+.link__unstyle:hover {color: #fff;}
+
+.nav-link:hover {color: var(--primary) !important;}
+.dropdown-item {color: #fff;}
+.dropdown-item:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.ion_icon_small {font-size: 21px;}
+
+.ion_icon_medium {font-size: 30px;}
+
+ul li {list-style: none !important;}
+
+.card-header, .card-footer {background: none;}
+
+.home_welcome_field, .services_field {
+    height: 81.9vh;
+    background: url(../assets/backgrounds/homepage_bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.services_field {
+    height: 60vh;
+    background: url(../assets/backgrounds/services_bg.png) no-repeat;
+    background-size: cover;
+}
+
+.custom__list {
+    width: fit-content;
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__box {
+    border-radius: 10px;
+    box-shadow: 0 3px 4px #ddd;
+}
+
+.form-control {
+    border: .1px solid #d8b556;
+}
+
+.form-control:focus {
+    border: .1px solid #E0BE5F !important;
+    box-shadow: 0 0 2px 2px #ccab51 !important;
+}
+
+.article-card:hover {
+    animation: shadowed_and_translate .25s ease-in 0s forwards;
+}
+
+.article_img {
+    width: 100%;
+    height: 50vh;
+    border-radius: 10px;
+}
+
+.comment_box {
+    width: 75%;
+}
+
+.comment_author {
+    width: 30%;
+}
+
+.comment_author ion-icon {
+    font-size: 30px;
+    border: .1px solid #ddd;
+}
+
+.comment_content {
+    min-width: 80%;
+    background: #eee;
+    border-radius: 10px;
+}
+
+.comment_form {
+    width: 50%;
+}
+
+.accordion-button {
+    background: var(--primary) !important;
+    color: var(--third) !important;
+    border: none !important;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+    color: var(--third) !important;
+}
+
+.login_card {
+    width: 50% !important;
+    border: .1px solid #eee;
+}
+
+@keyframes shadowed_and_translate {
+    from {
+        box-shadow: none;
+    }
+
+    to {
+        box-shadow: 0 0 10px #ddd;
+        transform: translateY(-10px);
+    }
+}
+
+
+.bg__third:hover {color: #ddd;}
+
+.sidebar {
+    width: 15%;
+    height: 100vh;
+    background: #eee;
+    border-right: .1px solid #ddd;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .navbar .nav li a {font-size: 15px;}
+    .comment_form {width: 75%;}
+    .login_card {width: 75% !important;}
+}
+
+@media (max-width: 768px) {
+    .comment_box {
+        width: 100%;
+    }
+
+    .comment_form {width: 100%;}
+
+    .login_card {width: 100% !important;}
+
+    .comment_content {min-width: 300px;}
+}
+
+@media (max-width: 375px) {
+    html {width: 100% !important;}
+    .home_welcome_field {
+        width: 100%;
+        height: 90vh;
+    }
+}
